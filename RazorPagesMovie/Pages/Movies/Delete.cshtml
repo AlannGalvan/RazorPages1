@@ -1,0 +1,49 @@
+﻿@page
+@model RazorPagesMovie.Pages.Movies.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Eliminar</h1>
+
+<h3>Estas seguro que quieres eliminar?</h3>
+<div>
+    <h4>Pelicula</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Pelicula.Titulo)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Pelicula.Titulo)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Pelicula.FechaDeLanzamiento)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Pelicula.FechaDeLanzamiento)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Pelicula.Genero)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Pelicula.Genero)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Pelicula.Precio)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Pelicula.Precio)
+        </dd>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Pelicula.Rating)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Pelicula.Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-page="./Index">Volver</a>
+    </form>
+</div>
